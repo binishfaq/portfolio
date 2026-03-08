@@ -1,19 +1,3 @@
-// Particles initialization
-particlesJS("particles-js", {
-    particles: {
-        number: { value: 60, density: { enable: true, value_area: 800 } },
-        color: { value: "#3b82f6" },
-        shape: { type: "circle" },
-        opacity: { value: 0.3, random: true },
-        size: { value: 3, random: true },
-        line_linked: { enable: true, distance: 150, color: "#3b82f6", opacity: 0.2, width: 1 },
-        move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out" }
-    },
-    interactivity: {
-        detect_on: "canvas",
-        events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" } }
-    }
-});
 
 // Typing effect
 const words = ["Web Developer", "Full Stack Developer", "IT Student", "Problem Solver"];
