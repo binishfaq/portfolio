@@ -45,15 +45,7 @@ body {
     overflow-x: hidden;
 }
 
-#particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.5;
-}
+/* Particles section removed – no background particles */
 
 .container {
     max-width: 1200px;
@@ -374,55 +366,31 @@ body.light .navbar {
     color: var(--text-secondary);
 }
 
-/* Skills grid (icons + names) */
+/* Skills grid – 5 items per row on desktop, responsive */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.8rem;
     margin-top: 2rem;
+    perspective: 1200px;
 }
 
-.skill-icon-item {
-    background: var(--card-bg);
-    backdrop-filter: blur(8px);
-    border: 1px solid var(--glass-border);
-    border-radius: 16px;
-    padding: 1.5rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8rem;
-    transition: var(--transition);
-    text-align: center;
-}
-
-/* Skills grid (icons + names) – 5 items per row on desktop */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Exactly 5 columns on large screens */
-    gap: 1.8rem; /* Increased gap for breathing room */
-    margin-top: 2rem;
-    perspective: 1200px; /* Enhanced 3D perspective */
-}
-
-/* Responsive: adjust columns for smaller screens */
 @media (max-width: 992px) {
     .skills-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 items per row on tablets */
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .skills-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 items per row on small tablets */
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.2rem;
     }
 }
 
 @media (max-width: 480px) {
     .skills-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 items per row on mobile */
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
 }
@@ -431,13 +399,13 @@ body.light .navbar {
     background: var(--card-bg);
     backdrop-filter: blur(8px);
     border: 2px solid transparent;
-    border-radius: 16px; /* Smaller radius */
-    padding: 1rem 0.25rem; /* Much smaller padding */
+    border-radius: 16px;
+    padding: 1rem 0.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.4rem; /* Minimal gap */
+    gap: 0.4rem;
     text-align: center;
     transition: transform 0.4s ease, border-color 0.3s, box-shadow 0.3s;
     transform-style: preserve-3d;
@@ -445,24 +413,30 @@ body.light .navbar {
     width: 100%;
 }
 
+/* Enhanced hover effect with glow */
 .skill-icon-item:hover {
-    transform: rotateY(8deg) rotateX(4deg) scale(1.03);
+    transform: rotateY(8deg) rotateX(4deg) scale(1.05);
     border-color: var(--accent-primary);
-    box-shadow: 0 25px 35px -12px var(--accent-primary), 0 0 25px rgba(59,130,246,0.4);
+    box-shadow: 
+        0 25px 35px -12px var(--accent-primary),
+        0 0 20px var(--accent-primary),
+        0 0 40px var(--accent-secondary);
 }
 
 .skill-icon-item i {
-    font-size: 3rem; /* Slightly larger icons */
+    font-size: 3rem;
     color: var(--accent-primary);
     transition: transform 0.3s;
 }
 
 .skill-icon-item:hover i {
-    transform: translateZ(15px); /* More pronounced lift */
+    transform: translateZ(15px);
 }
 
+/* Skill name – using display font for better readability */
 .skill-icon-item span {
-    font-size: 1.1rem; /* Slightly larger text */
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-primary);
     letter-spacing: 0.3px;

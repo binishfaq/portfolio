@@ -3,18 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zain Bin Ishfaq · portfolio</title>
+    <title>Zain Bin Ishfaq · Portfolio</title>
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <!-- Libraries (vanilla-tilt only) -->
     <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
 </head>
 <body>
-    <!-- Particles Background -->
-    <div id="particles-js"></div>
 
     <!-- Navbar -->
     <nav class="navbar">
@@ -39,21 +36,23 @@
     <!-- Hero -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <span class="hero-badge"> Welcome to my portfolio</span>
-            <h1>Zain Bin Ishfaq</h1>
+            <span class="hero-badge">Welcome to my portfolio</span>
+            <h1><span class="name-gradient">Zain Bin Ishfaq</span></h1>
             <div class="hero-typing">
                 <span class="static-text">I'm a</span>
                 <span id="typing" class="typed-text"></span>
             </div>
-            <p class="hero-description">Full‑stack developer & IT student. I craft immersive digital experiences with modern technologies.</p>
+            <p class="hero-description">Frontend developer & IT student. I craft immersive digital experiences with modern technologies and a sharp eye for detail.</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">View work <i class="fas fa-arrow-right"></i></a>
-                <a href="./assets/Zain-Bin-Ishfaq-Resume.pdf" class="btn btn-outline" id="downloadCV" download>Download CV <i class="fas fa-download"></i></a>
+                <a href="./assets/files/Zain_Bin_Ishfaq_Resume.pdf" class="btn btn-outline" download>Download CV <i class="fas fa-download"></i></a>
             </div>
         </div>
         <div class="hero-image">
             <div class="shape-blob"></div>
-            <img src="./assets/images/pic.jpg">
+            <div class="hero-image-wrap">
+                <img src="./assets/images/pic.jpg" alt="Zain Bin Ishfaq">
+            </div>
         </div>
     </section>
 
@@ -62,20 +61,20 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-grid">
-                <div class="about-card glass">
+                <div class="about-card">
                     <i class="fas fa-user-graduate about-icon"></i>
                     <h3>Who I am</h3>
-                    <p>Hi, I'm Zain Bin Ishfaq, an enthusiastic IT student with a passion for web and software development. I create modern, responsive, and user-friendly websites that solve real-world problems.</p>
+                    <p>Hi, I'm Zain — an enthusiastic IT student with a passion for web and software development. I create modern, responsive, and user-friendly websites that solve real-world problems.</p>
                 </div>
-                <div class="about-card glass">
+                <div class="about-card">
                     <i class="fas fa-laptop-code about-icon"></i>
                     <h3>What I do</h3>
-                    <p>I build full-stack applications using HTML, CSS, JavaScript, Node.js, MySQL, and React. I love combining animations and 3D effects to make experiences unforgettable.</p>
+                    <p>I build full-stack applications using HTML, CSS, JavaScript. I love combining clean code with polished UI to make experiences memorable.</p>
                 </div>
-                <div class="about-card glass">
+                <div class="about-card">
                     <i class="fas fa-rocket about-icon"></i>
                     <h3>My goal</h3>
-                    <p>To become a skilled full-stack developer and contribute to innovative digital solutions. I'm constantly learning and exploring new tech trends.</p>
+                    <p>To become a skilled full-stack developer and contribute to innovative digital solutions. I'm constantly learning and exploring emerging tech trends.</p>
                 </div>
             </div>
         </div>
@@ -86,17 +85,17 @@
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid" id="skillsContainer">
-                <!-- Skills will be injected by JS -->
+                <!-- Injected by JS -->
             </div>
         </div>
     </section>
 
-    <!-- Projects (GitHub) -->
+    <!-- Projects -->
     <section id="projects" class="section reveal">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid" id="github-projects">
-                <div class="loader">Loading projects...</div>
+                <div class="loader">Loading projects…</div>
             </div>
         </div>
     </section>
@@ -105,25 +104,25 @@
     <section id="contact" class="section reveal">
         <div class="container">
             <h2 class="section-title">Let's Connect</h2>
-            <div class="contact-wrapper glass">
+            <div class="contact-wrapper">
                 <div class="contact-info">
                     <h3>Get in touch</h3>
+                    <p>Have a project in mind or just want to say hello? I'd love to hear from you.</p>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <a href="mailto:zainbinishfaq@gmail.com">zainbinishfaq@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone-alt"></i>
-                        <span>0307 4855828  |  0313 7328089</span>
+                        <span>0307 4855828 &nbsp;|&nbsp; 0313 7328089</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <span>Fatehpur Layyah, Pakistan</span>
                     </div>
                     <div class="contact-social">
-                        <a href="https://github.com/binishfaq" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/zainbinishfaq" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/binishfaq" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/zainbinishfaq" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
@@ -147,7 +146,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Zain Bin Ishfaq — Built with <i class="fas fa-heart" style="color: #ff6b6b;"></i> and modern stack</p>
+        <p>© 2026 Zain Bin Ishfaq <i class="fas fa-heart"></i></p>
     </footer>
 
     <script src="script.js"></script>
